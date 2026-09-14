@@ -19,38 +19,38 @@ const ColinhaFinal = ({ votos, onReset }) => {
       {/* Elemento que será transformado em imagem */}
       <div 
         ref={colinhaRef} 
-        className="w-full bg-white text-gray-900 p-6 rounded shadow-lg border border-gray-200 mb-6"
+        className="w-full bg-white dark:bg-black text-gray-900 dark:text-gray-100 p-6 rounded shadow-lg border border-gray-200 dark:border-gray-700 dark:border-gray-800 mb-6"
         style={{ minHeight: '600px' }}
       >
-        <div className="text-center mb-6 border-b-2 border-gray-800 pb-2">
-          <h1 className="text-2xl font-black uppercase text-gray-900">Colinha DF</h1>
-          <p className="text-gray-600 font-bold uppercase">Eleições Distrito Federal</p>
+        <div className="text-center mb-6 border-b-2 border-gray-800 dark:border-gray-100 pb-2">
+          <h1 className="text-2xl font-black uppercase text-gray-900 dark:text-gray-100">Colinha DF</h1>
+          <p className="text-gray-600 dark:text-gray-400 font-bold uppercase">Eleições Distrito Federal</p>
         </div>
 
         <div className="flex flex-col gap-4">
           {votos.map((voto, index) => (
-            <div key={index} className="flex flex-row items-center border-b border-gray-300 pb-3">
+            <div key={index} className="flex flex-row items-center border-b border-gray-300 dark:border-gray-700 pb-3">
               {voto.foto && voto.numero !== "BRANCO" ? (
-                <img src={voto.foto} alt="Candidato" crossOrigin="anonymous" className="w-16 h-20 object-cover rounded shadow border border-gray-200" />
+                <img src={voto.foto} alt="Candidato" crossOrigin="anonymous" className="w-16 h-20 object-cover rounded shadow border border-gray-200 dark:border-gray-700" />
               ) : (
-                <div className="w-16 h-20 bg-gray-200 flex items-center justify-center rounded shadow border border-gray-300">
-                  <span className="text-xs text-gray-500 text-center">Sem<br/>Foto</span>
+                <div className="w-16 h-20 bg-gray-200 dark:bg-gray-800 flex items-center justify-center rounded shadow border border-gray-300 dark:border-gray-700">
+                  <span className="text-xs text-gray-500 dark:text-gray-400 text-center">Sem<br/>Foto</span>
                 </div>
               )}
               
               <div className="ml-4 flex flex-col flex-1">
-                <span className="text-sm font-bold text-gray-500 uppercase">{voto.cargo}</span>
-                <span className="text-lg font-black text-gray-900">{voto.numero}</span>
-                <span className="text-md font-bold text-gray-800">{voto.nome}</span>
+                <span className="text-sm font-bold text-gray-500 dark:text-gray-400 uppercase">{voto.cargo}</span>
+                <span className="text-lg font-black text-gray-900 dark:text-gray-100">{voto.numero}</span>
+                <span className="text-md font-bold text-gray-800 dark:text-gray-200">{voto.nome}</span>
                 {voto.partido && (
-                  <span className="text-sm text-gray-600">{voto.partido}</span>
+                  <span className="text-sm text-gray-600 dark:text-gray-400">{voto.partido}</span>
                 )}
               </div>
             </div>
           ))}
         </div>
         
-        <div className="mt-8 text-center text-xs text-gray-500 font-semibold">
+        <div className="mt-8 text-center text-xs text-gray-500 dark:text-gray-400 font-semibold">
           <p>⚠️ É proibido o uso de celular na cabine.</p>
           <p>Leve esta colinha anotada ou impressa.</p>
           <p className="mt-2 text-[10px]">Gerado no app Colinha DF</p>

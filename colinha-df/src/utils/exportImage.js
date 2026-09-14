@@ -6,8 +6,7 @@ export const exportAsImage = async (element, imageFileName) => {
   try {
     const dataUrl = await htmlToImage.toPng(element, {
       quality: 1.0,
-      backgroundColor: '#ffffff',
-      pixelRatio: 2
+            pixelRatio: 2
     });
     
     downloadImage(dataUrl, imageFileName);
@@ -24,8 +23,7 @@ export const exportAndShareImage = async (element, imageFileName) => {
   try {
     dataUrl = await htmlToImage.toPng(element, {
       quality: 1.0,
-      backgroundColor: '#ffffff',
-      pixelRatio: 2
+            pixelRatio: 2
     });
   } catch (error) {
     console.error("Erro na geração da imagem", error);
