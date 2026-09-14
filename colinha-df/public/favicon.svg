@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" fill="#FFFFFF" rx="64"/>
+  <rect x="128" y="128" width="256" height="256" fill="#009B3A"/>
+  <g fill="#FEDF00">
+    <!-- Eixo Y -->
+    <polygon points="256,150 290,190 222,190" />
+    <rect x="246" y="190" width="20" height="132" />
+    <polygon points="256,362 290,322 222,322" />
+    <!-- Eixo X -->
+    <polygon points="150,256 190,290 190,222" />
+    <rect x="190" y="246" width="132" height="20" />
+    <polygon points="362,256 322,290 322,222" />
+  </g>
+</svg>
