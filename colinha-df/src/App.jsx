@@ -6,7 +6,8 @@ import ColinhaFinal from './components/ColinhaFinal';
 const CARGOS_ORDEM = [
   { id: 'deputado_federal', titulo: 'Deputado Federal', digitos: 4 },
   { id: 'deputado_distrital', titulo: 'Deputado Distrital', digitos: 5 },
-  { id: 'senador', titulo: 'Senador', digitos: 3 },
+  { id: 'senador', titulo: 'Senador 1ª Vaga', digitos: 3 },
+  { id: 'senador', titulo: 'Senador 2ª Vaga', digitos: 3 },
   { id: 'governador', titulo: 'Governador', digitos: 2 },
   { id: 'presidente', titulo: 'Presidente', digitos: 2 }
 ];
