@@ -20,6 +20,15 @@ function App() {
   const [darkMode, setDarkMode] = useState(false);
 
   const handleConfirmVote = (votoData) => {
+    // Evita votação duplicada para o mesmo candidato no Senado
+    if (votoData.cargo.includes('Senador') && votoData.nome !== 'VOTO NULO' && votoData.numero !== 'BRANCO') {
+      const jaVotou = votos.some(v => v.cargo.includes('Senador') && v.numero === votoData.numero);
+      if (jaVotou) {
+        alert('Você já votou neste candidato para a 1ª Vaga de Senador. Escolha um candidato diferente para a 2ª Vaga.');
+        return; // Impede o avanço da etapa
+      }
+    }
+
     const novosVotos = [...votos, votoData];
     setVotos(novosVotos);
     setEtapaAtual(etapaAtual + 1);
